@@ -1,9 +1,12 @@
 {
   "name": "parse",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run gen-cloud && node ./src/index.js",
+    "gen-cloud": "node ./scripts/generateCloudFunctions.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +16,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "parse": "^5.3.0",
+    "parse-dashboard": "^5.4.0",
     "parse-server": "^7.2.0"
   }
 }
